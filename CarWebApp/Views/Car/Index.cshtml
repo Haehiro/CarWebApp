@@ -1,0 +1,48 @@
+﻿@using CarWebApp.Models;
+@model List<Car>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Cars</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Mark
+        </th>
+        <th>
+            Model
+        </th>
+        <th>
+            Price
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mark)
+            </td>
+       
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+       
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+      
+            <td>
+                
+            </td>
+        </tr>
+    }
+
+</table>
+
